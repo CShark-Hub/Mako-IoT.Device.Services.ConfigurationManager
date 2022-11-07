@@ -37,7 +37,7 @@
 		<dependency id="nanoFramework.System.Net.Http" version="1.5.30"  />
 		<dependency id="nanoFramework.System.Text" version="1.2.22"  />
 		<dependency id="nanoFramework.System.Threading" version="1.1.8"  />
-    <dependency id="nanoFramework.Json" version="2.2.63"  />
+    		<dependency id="nanoFramework.Json" version="2.2.63"  />
     </dependencies>
   </metadata>
   <files>
