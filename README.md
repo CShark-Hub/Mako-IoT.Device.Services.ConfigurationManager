@@ -1,4 +1,5 @@
-# Project readme
+# Mako-IoT.Device.Services.ConfigurationManager
+Provides _configuration mode_ on the device. When entering configuration mode, web server is launched on the device and configuration API is exposed. After finishing config updates the device is rebooted and returns to normal operation mode.
 
 ## How to manually sync fork
 - Clone repository and navigate into folder
