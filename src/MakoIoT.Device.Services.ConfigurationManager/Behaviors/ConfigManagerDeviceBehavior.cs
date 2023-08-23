@@ -23,13 +23,12 @@ namespace MakoIoT.Device.Services.ConfigurationManager.Behaviors
         {
             var mode = _operationModeService.GetOperationMode();
             _logger.LogDebug($"Device starting mode: {mode}");
-
             if (mode == OperationMode.Normal)
             {
                 return true;
             }
 
-            var configManger = (ConfigManager)ActivatorUtilities.CreateInstance(_serviceProvider, typeof(IConfigManager));
+            var configManger = (IConfigManager)_serviceProvider.GetRequiredService(typeof(IConfigManager));
             return configManger.ProcessOperationMode(mode);
         }
     }
