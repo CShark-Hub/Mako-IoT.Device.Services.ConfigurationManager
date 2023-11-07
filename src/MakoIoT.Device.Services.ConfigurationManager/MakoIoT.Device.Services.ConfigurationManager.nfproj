@@ -51,9 +51,8 @@
       <HintPath>..\..\packages\MakoIoT.Device.Services.Mediator.1.0.31.54540\lib\MakoIoT.Device.Services.Mediator.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MakoIoT.Device.Services.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\MakoIoT.Device.Services.Server.1.0.34.13996\lib\MakoIoT.Device.Services.Server.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MakoIoT.Device.Services.Server">
+      <HintPath>..\..\packages\MakoIoT.Device.Services.Server.1.0.35.21879\lib\MakoIoT.Device.Services.Server.dll</HintPath>
     </Reference>
     <Reference Include="MakoIoT.Device.Services.WiFi.AP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\MakoIoT.Device.Services.WiFi.AP.1.0.36.4164\lib\MakoIoT.Device.Services.WiFi.AP.dll</HintPath>
@@ -65,9 +64,8 @@
     <Reference Include="MakoIoT.Device.Utilities.String, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MakoIoT.Device.Utilities.String.1.0.31.17475\lib\MakoIoT.Device.Utilities.String.dll</HintPath>
     </Reference>
-    <Reference Include="mscorlib, Version=1.14.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.CoreLibrary.1.14.2\lib\mscorlib.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="mscorlib">
+      <HintPath>..\..\packages\nanoFramework.CoreLibrary.1.14.20\lib\mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.DependencyInjection">
       <HintPath>..\..\packages\nanoFramework.DependencyInjection.1.1.1\lib\nanoFramework.DependencyInjection.dll</HintPath>
