@@ -1,7 +1,7 @@
 ﻿using MakoIoT.Device.Services.ConfigurationManager.Behaviors;
 using MakoIoT.Device.Services.ConfigurationManager.Services;
 using MakoIoT.Device.Services.Interface;
-using nanoFramework.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MakoIoT.Device.Services.ConfigurationManager.Extensions
 {

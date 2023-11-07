@@ -6,7 +6,7 @@ using MakoIoT.Device.Services.Interface;
 using MakoIoT.Device.Services.Server.Services;
 using MakoIoT.Device.Services.WiFi.AP;
 using Microsoft.Extensions.Logging;
-using nanoFramework.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using nanoFramework.TestFramework;
 
 namespace MakoIoT.Device.Services.ConfigurationManager.Test.Extensions
