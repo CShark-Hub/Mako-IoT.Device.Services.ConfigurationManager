@@ -6,7 +6,6 @@ using MakoIoT.Device.Services.Interface;
 using MakoIoT.Device.Services.Mediator;
 using MakoIoT.Device.Services.Server.Services;
 using MakoIoT.Device.Services.WiFi.AP;
-using Microsoft.Extensions.Logging;
 
 namespace MakoIoT.Device.Services.ConfigurationManager
 {
@@ -17,9 +16,9 @@ namespace MakoIoT.Device.Services.ConfigurationManager
         private readonly IDeviceControl _device;
         private readonly IServer _apiServer;
         private readonly IConfigurationService _configurationService;
-        private readonly ILogger _logger;
+        private readonly ILog _logger;
 
-        public ConfigManager(IOperationModeService operationModeService, INetworkInterfaceManager interfaceManager, IDeviceControl device, IServer apiServer, ILogger logger, IConfigurationService configurationService)
+        public ConfigManager(IOperationModeService operationModeService, INetworkInterfaceManager interfaceManager, IDeviceControl device, IServer apiServer, ILog logger, IConfigurationService configurationService)
         {
             _operationModeService = operationModeService;
             _interfaceManager = interfaceManager;
@@ -52,7 +51,7 @@ namespace MakoIoT.Device.Services.ConfigurationManager
         /// <inheritdoc />
         public bool ProcessOperationMode(OperationMode mode)
         {
-            _logger.LogDebug($"Processing state {mode}");
+            _logger.Trace($"Processing state {mode}");
             switch (mode)
             {
                 case OperationMode.Normal:
@@ -78,7 +77,7 @@ namespace MakoIoT.Device.Services.ConfigurationManager
         public void ResetToDefaults()
         {
             _configurationService.ClearAll();
-            _logger.LogDebug("All config files cleared");
+            _logger.Trace("All config files cleared");
             if (_operationModeService.GetOperationMode() != OperationMode.Normal)
             {
                 try
@@ -87,7 +86,7 @@ namespace MakoIoT.Device.Services.ConfigurationManager
                 }
                 catch (Exception e)
                 {
-                    _logger.LogError("Error exiting config mode", e);
+                    _logger.Trace(e, "Error exiting config mode");
                     _operationModeService.SetOperationMode(OperationMode.Normal);
                     _device.Reboot();
                 }
@@ -100,24 +99,14 @@ namespace MakoIoT.Device.Services.ConfigurationManager
 
         private void ProcessConfigStart()
         {
-            //PHASE 1
-            //disconnect wifi network
-            _logger.LogDebug("Disconnecting wifi");
             _interfaceManager.DisconnectWifi();
-
-            _logger.LogDebug("Disabling wifi client");
             _interfaceManager.DisableWiFi();
-
-            //enable AP
-            _logger.LogDebug("Enabling AP");
             _interfaceManager.EnableAP();
 
-            //set next mode
-            _logger.LogDebug("Setting operation mode to Configuration");
+            _logger.Trace("Setting operation mode to Configuration");
             _operationModeService.SetOperationMode(OperationMode.Configuration);
 
-            //reboot
-            _logger.LogDebug("Rebooting");
+            _logger.Trace("Rebooting");
             _device.Reboot();
         }
 
@@ -125,46 +114,36 @@ namespace MakoIoT.Device.Services.ConfigurationManager
         {
             //PHASE 2
 
-            //checks
-            _logger.LogTrace($"IsApEnabled:{_interfaceManager.IsApEnabled}, IsWifiEnabled:{_interfaceManager.IsWifiEnabled}");
+            _logger.Trace($"IsApEnabled:{_interfaceManager.IsApEnabled}, IsWifiEnabled:{_interfaceManager.IsWifiEnabled}");
             if (!_interfaceManager.IsApEnabled || _interfaceManager.IsWifiEnabled)
             {
-                //go back
-                _logger.LogDebug("Setting operation mode to ConfigurationStart");
+                _logger.Trace("Setting operation mode to ConfigurationStart");
                 _operationModeService.SetOperationMode(OperationMode.ConfigurationStart);
                 ProcessOperationMode(OperationMode.ConfigurationStart);
                 return;
             }
 
-            //start dhcp
-            _logger.LogDebug("Starting DHCP");
             _interfaceManager.StartDhcp();
 
-            //start webserver
-            _logger.LogDebug("Starting WebServer");
+            _logger.Trace("Starting WebServer");
             _apiServer.Initialize();
             _apiServer.Start();
         }
 
         private void ProcessConfigExit()
         {
-            //PHASE 3
-            _logger.LogDebug("Stopping WebServer");
+            _logger.Trace("Stopping WebServer");
             _apiServer.Stop();
 
-            //disable AP
-            _logger.LogDebug("Stopping DHCP");
             _interfaceManager.StopDhcp();
-            _logger.LogDebug("Disabling AP");
             _interfaceManager.DisableAP();
-            _logger.LogDebug("Enabling wifi client");
             _interfaceManager.EnableWiFi();
 
-            _logger.LogDebug("Setting operation mode to Normal");
+            _logger.Trace("Setting operation mode to Normal");
             _operationModeService.SetOperationMode(OperationMode.Normal);
 
             //reboot
-            _logger.LogDebug("Rebooting");
+            _logger.Trace("Rebooting");
             _device.Reboot(); 
         }
 

@@ -5,7 +5,6 @@ using MakoIoT.Device.Services.ConfigurationManager.Test.Mocks;
 using MakoIoT.Device.Services.Interface;
 using MakoIoT.Device.Services.Server.Services;
 using MakoIoT.Device.Services.WiFi.AP;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using nanoFramework.TestFramework;
 
@@ -19,7 +18,7 @@ namespace MakoIoT.Device.Services.ConfigurationManager.Test.Extensions
         {
             var mockBuilder = new DeviceBuilderMock();
             mockBuilder.Services.AddSingleton(typeof(IStorageService), typeof(StorageServiceMock));
-            mockBuilder.Services.AddSingleton(typeof(ILogger), typeof(MockLogger));
+            mockBuilder.Services.AddSingleton(typeof(ILog), typeof(MockLogger));
 
             mockBuilder.Services.AddSingleton(typeof(INetworkInterfaceManager), typeof(NetworkInterfaceManagerMock));
             mockBuilder.Services.AddSingleton(typeof(IDeviceControl), typeof(DeviceControlMock));

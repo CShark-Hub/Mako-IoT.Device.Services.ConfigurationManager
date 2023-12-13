@@ -40,10 +40,6 @@
       <HintPath>..\..\packages\MakoIoT.Device.Services.Configuration.1.0.36.62303\lib\MakoIoT.Device.Services.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MakoIoT.Device.Services.Configuration.Metadata, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\MakoIoT.Device.Services.Configuration.Metadata.1.0.39.33675\lib\MakoIoT.Device.Services.Configuration.Metadata.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MakoIoT.Device.Services.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\MakoIoT.Device.Services.Interface.1.0.43.29288\lib\MakoIoT.Device.Services.Interface.dll</HintPath>
       <Private>True</Private>
@@ -77,10 +73,6 @@
     </Reference>
     <Reference Include="nanoFramework.Json, Version=2.2.103.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.Json.2.2.103\lib\nanoFramework.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nanoFramework.Logging, Version=1.1.76.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Logging.1.1.76\lib\nanoFramework.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.Runtime.Events, Version=1.11.15.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">

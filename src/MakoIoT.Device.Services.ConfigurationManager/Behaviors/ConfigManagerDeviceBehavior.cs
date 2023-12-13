@@ -1,18 +1,17 @@
 ﻿using MakoIoT.Device.Services.ConfigurationManager.Services;
 using MakoIoT.Device.Services.Interface;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace MakoIoT.Device.Services.ConfigurationManager.Behaviors
 {
-    public class ConfigManagerDeviceBehavior : IDeviceStartBehavior
+    internal sealed class ConfigManagerDeviceBehavior : IDeviceStartBehavior
     {
         private readonly IOperationModeService _operationModeService;
-        private readonly ILogger _logger;
+        private readonly ILog _logger;
         private readonly IServiceProvider _serviceProvider;
 
-        public ConfigManagerDeviceBehavior(IOperationModeService operationModeService, ILogger logger, IServiceProvider serviceProvider)
+        public ConfigManagerDeviceBehavior(IOperationModeService operationModeService, ILog logger, IServiceProvider serviceProvider)
         {
             _operationModeService = operationModeService;
             _logger = logger;
@@ -22,7 +21,7 @@ namespace MakoIoT.Device.Services.ConfigurationManager.Behaviors
         public bool DeviceStarting()
         {
             var mode = _operationModeService.GetOperationMode();
-            _logger.LogDebug($"Device starting mode: {mode}");
+            _logger.Trace($"Device starting mode: {mode}");
             if (mode == OperationMode.Normal)
             {
                 return true;
