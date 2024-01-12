@@ -9,9 +9,9 @@ namespace MakoIoT.Device.Services.ConfigurationManager.Extensions
     {
         public static IDeviceBuilder AddConfigurationManager(this IDeviceBuilder builder)
         {
-            builder.Services.AddSingleton(typeof(IDeviceStartBehavior), typeof(ConfigManagerDeviceBehavior));
-            builder.Services.AddSingleton(typeof(IConfigManager), typeof(ConfigManager));
-            builder.Services.AddSingleton(typeof(IOperationModeService), typeof(OperationModeService));
+            builder.Services.AddTransient(typeof(IDeviceStartBehavior), typeof(ConfigManagerDeviceBehavior));
+            builder.Services.AddTransient(typeof(IConfigManager), typeof(ConfigManager));
+            builder.Services.AddTransient(typeof(IOperationModeService), typeof(OperationModeService));
 
             return builder;
         }
