@@ -1,5 +1,5 @@
-﻿using MakoIoT.Device.Services.Server.Services;
-using System;
+﻿using System;
+using MakoIoT.Device.Services.Interface;
 
 namespace MakoIoT.Device.Services.ConfigurationManager.Test.Mocks
 {
