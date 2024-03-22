@@ -39,20 +39,17 @@
       <HintPath>..\..\packages\nanoFramework.Iot.Device.DhcpServer.1.2.454\lib\Iot.Device.DhcpServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MakoIoT.Device.Services.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\MakoIoT.Device.Services.Interface.1.0.45.4694\lib\MakoIoT.Device.Services.Interface.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MakoIoT.Device.Services.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MakoIoT.Device.Services.Interface.1.0.46.2905\lib\MakoIoT.Device.Services.Interface.dll</HintPath>
     </Reference>
-    <Reference Include="MakoIoT.Device.Services.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\MakoIoT.Device.Services.Server.1.0.51.58665\lib\MakoIoT.Device.Services.Server.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MakoIoT.Device.Services.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MakoIoT.Device.Services.Server.1.0.53.21457\lib\MakoIoT.Device.Services.Server.dll</HintPath>
     </Reference>
-    <Reference Include="MakoIoT.Device.Services.WiFi.AP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\MakoIoT.Device.Services.WiFi.AP.1.0.55.37186\lib\MakoIoT.Device.Services.WiFi.AP.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MakoIoT.Device.Services.WiFi.AP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MakoIoT.Device.Services.WiFi.AP.1.0.56.42901\lib\MakoIoT.Device.Services.WiFi.AP.dll</HintPath>
     </Reference>
-    <Reference Include="MakoIoT.Device.Utilities.Invoker">
-      <HintPath>..\..\packages\MakoIoT.Device.Utilities.Invoker.1.0.27.50780\lib\MakoIoT.Device.Utilities.Invoker.dll</HintPath>
+    <Reference Include="MakoIoT.Device.Utilities.Invoker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MakoIoT.Device.Utilities.Invoker.1.0.28.14340\lib\MakoIoT.Device.Utilities.Invoker.dll</HintPath>
     </Reference>
     <Reference Include="MakoIoT.Device.Utilities.String, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\MakoIoT.Device.Utilities.String.1.0.33.52014\lib\MakoIoT.Device.Utilities.String.dll</HintPath>

@@ -4,7 +4,6 @@ using MakoIoT.Device.Services.ConfigurationManager.Interface;
 using MakoIoT.Device.Services.ConfigurationManager.Services;
 using MakoIoT.Device.Services.Interface;
 using MakoIoT.Device.Services.Mediator;
-using MakoIoT.Device.Services.Server.Services;
 using MakoIoT.Device.Services.WiFi.AP;
 
 namespace MakoIoT.Device.Services.ConfigurationManager
