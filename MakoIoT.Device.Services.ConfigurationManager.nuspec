@@ -17,12 +17,12 @@
     <description>Configuration mode manager for MAKO-IoT</description>
     <tags>nanoFramework C# csharp netmf netnf mako-iot configuration wifimanager</tags>
     <dependencies>
-      <dependency id="MakoIoT.Device.Services.Configuration" version="1.0.58.59368" />
+      <dependency id="MakoIoT.Device.Services.Configuration" version="1.0.59.12833" />
       <dependency id="MakoIoT.Device.Services.Interface" version="1.0.47.44904" />
-      <dependency id="MakoIoT.Device.Services.Mediator" version="1.0.52.56154" />
-      <dependency id="MakoIoT.Device.Services.Server" version="1.0.72.44109" />
-      <dependency id="MakoIoT.Device.Services.WiFi.AP" version="1.0.84.20731" />
-      <dependency id="MakoIoT.Device.Utilities.Invoker" version="1.0.37.26660" />
+      <dependency id="MakoIoT.Device.Services.Mediator" version="1.0.53.51021" />
+      <dependency id="MakoIoT.Device.Services.Server" version="1.0.73.8850" />
+      <dependency id="MakoIoT.Device.Services.WiFi.AP" version="1.0.85.22334" />
+      <dependency id="MakoIoT.Device.Utilities.Invoker" version="1.0.38.31486" />
       <dependency id="MakoIoT.Device.Utilities.String" version="1.0.37.35071" />
       <dependency id="nanoFramework.CoreLibrary" version="1.15.5" />
       <dependency id="nanoFramework.DependencyInjection" version="1.1.3" />
