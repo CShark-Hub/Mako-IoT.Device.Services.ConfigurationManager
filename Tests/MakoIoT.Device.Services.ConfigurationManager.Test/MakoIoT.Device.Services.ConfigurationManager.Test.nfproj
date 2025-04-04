@@ -45,7 +45,7 @@
       <HintPath>..\..\packages\MakoIoT.Device.Services.Server.1.0.89.37901\lib\MakoIoT.Device.Services.Server.dll</HintPath>
     </Reference>
     <Reference Include="MakoIoT.Device.Services.WiFi.AP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\MakoIoT.Device.Services.WiFi.AP.1.0.102.11591\lib\MakoIoT.Device.Services.WiFi.AP.dll</HintPath>
+      <HintPath>..\..\packages\MakoIoT.Device.Services.WiFi.AP.1.0.103.60313\lib\MakoIoT.Device.Services.WiFi.AP.dll</HintPath>
     </Reference>
     <Reference Include="MakoIoT.Device.Utilities.Invoker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\MakoIoT.Device.Utilities.Invoker.1.0.47.11396\lib\MakoIoT.Device.Utilities.Invoker.dll</HintPath>
