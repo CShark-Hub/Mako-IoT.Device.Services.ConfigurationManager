@@ -98,15 +98,20 @@ namespace MakoIoT.Device.Services.ConfigurationManager
 
         private void ProcessConfigStart()
         {
-            _interfaceManager.DisconnectWifi();
-            _interfaceManager.DisableWiFi();
-            _interfaceManager.EnableAP();
+            try
+            {
+                _interfaceManager.DisconnectWifi();
+                _interfaceManager.DisableWiFi();
+                _interfaceManager.EnableAP();
 
-            _logger.Trace("Setting operation mode to Configuration");
-            _operationModeService.SetOperationMode(OperationMode.Configuration);
-
-            _logger.Trace("Rebooting");
-            _device.Reboot();
+                _logger.Trace("Setting operation mode to Configuration");
+                _operationModeService.SetOperationMode(OperationMode.Configuration);
+            }
+            finally
+            {
+                _logger.Trace("Rebooting");
+                _device.Reboot();
+            }
         }
 
         private void ProcessConfig()
